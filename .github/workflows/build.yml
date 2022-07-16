@@ -1,7 +1,7 @@
-name: .NET
+name: Build
 on: [push, pull_request]
 jobs:
-  Build and test:
+  build:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
