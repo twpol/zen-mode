@@ -1,15 +1,15 @@
 name: .NET
 on: [push, pull_request]
 jobs:
-  build:
+  Build and test:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
+    - name: Setup
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
+    - name: Restore
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
